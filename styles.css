@@ -1,0 +1,117 @@
+.white-theme {
+  --bg-color: white;
+  --text-color: purple;
+  --text-color-input: purple;
+  --border-color: purple;
+  --submit-btn-text-color: purple;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: white;
+  --text-color-input: black;
+  --button-text-color: black;
+  --border-color: black;
+  --bg-button-color: white;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  background-color: var(--bg-color);
+}
+
+.change-theme-container {
+  position: absolute;
+  top: 70px;
+  right: 80px;
+}
+
+.change-theme-button {
+  color: var(--button-text-color);
+  background-color: var(--bg-button-color);
+  padding: 12px;
+  font-size: 17px;
+  border-radius: 13px;
+  border-color: purple;
+}
+
+.change-theme-button:hover {
+  color: green;
+  border-color: green;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.heading {
+  color: var(--text-color);
+  font-size: 48px;
+}
+
+.move-animation-from-left {
+  animation: slideInLeft 2s ease-out forwards;
+}
+
+.move-animation-from-right {
+  animation: slideInRight 2s ease-out forwards;
+}
+
+/* Визначення анімації */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px); /* Початкова позиція (зліва) */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Кінцева позиція (на місці) */
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px); /* Початкова позиція (справа) */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Кінцева позиція (на місці) */
+  }
+}
+
+.input {
+  width: 300px;
+  font-size: 30px;
+  padding: 10px;
+  height: 40px;
+  border-radius: 14px;
+  color: var(--text-color-input);
+}
+
+.submit-button {
+  width: 200px;
+  height: 58px;
+  padding: 10px;
+  color: var(--submit-btn-text-color);
+  font-size: 30px;
+  background-color: var(--bg-button-color);
+  border-radius: 14px;
+  border-color: var(--border-color);
+}

@@ -21,22 +21,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  gap: 200px;
   margin: 0;
   background-color: var(--bg-color);
-}
-
-.change-theme-container {
-  position: absolute;
-  top: 70px;
-  right: 80px;
 }
 
 .change-theme-button {
   color: var(--button-text-color);
   background-color: var(--bg-button-color);
   padding: 12px;
-  font-size: 17px;
+  font-size: 25px;
+  font-weight: 700;
   border-radius: 13px;
   border-color: purple;
 }
@@ -114,4 +109,66 @@ body {
   background-color: var(--bg-button-color);
   border-radius: 14px;
   border-color: var(--border-color);
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 25px;
+  }
+
+  .change-theme-button {
+    color: var(--button-text-color);
+    background-color: var(--bg-button-color);
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 13px;
+    border-color: purple;
+  }
+
+  .input {
+    padding: 2px;
+    width: 230px;
+  }
+
+  .submit-button {
+    padding: 10px;
+    font-size: 20px;
+    width: 170px;
+  }
+
+  .form {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    font-size: 25px;
+  }
+
+  .change-theme-button {
+    color: var(--button-text-color);
+    background-color: var(--bg-button-color);
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 13px;
+    border-color: purple;
+  }
+
+  .input {
+    padding: 2px;
+    width: 230px;
+  }
+
+  .submit-button {
+    padding: 10px;
+    font-size: 20px;
+    width: 170px;
+  }
+
+  .form {
+    padding-top: 40px;
+  }
 }

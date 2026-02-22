@@ -4,7 +4,7 @@ const body = document.querySelector("body");
 const form = document.querySelector("form");
 const heading = document.querySelector(".heading");
 const changeThemeButton = document.querySelector(".change-theme-button");
-const submitButton = form.querySelector(".submit-button");
+// const submitButton = form.querySelector(".submit-button");
 
 const savedThemeInLs = localStorage.getItem("theme");
 
@@ -53,14 +53,11 @@ form.addEventListener("submit", (event) => {
       heading.classList.remove("move-animation-from-left");
       heading.classList.add("move-animation-from-right");
       heading.textContent = `Happy Birthday: ${inputValue.charAt(0).toUpperCase() + inputValue.slice(1)}!!!`;
+    } else  {
+       heading.classList.remove("move-animation-from-right");
+       heading.classList.add("move-animation-from-left");
+       heading.textContent = `Happy Birthday: ${inputValue.charAt(0).toUpperCase() + inputValue.slice(1)}!!!`;
     }
-    heading.classList.add("move-animation-from-left");
-    heading.textContent = `Happy Birthday: ${inputValue.charAt(0).toUpperCase() + inputValue.slice(1)}!!!`;
-
     form.reset();
-  } else {
-    form.reset();
-    heading.classList.remove("move-animation-from-left");
-    heading.classList.remove("move-animation-from-right");
   }
 });
